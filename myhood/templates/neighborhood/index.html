@@ -1,0 +1,42 @@
+{% extends 'neighborhood/base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+
+{% block content %}
+<main>
+    <header>
+        <div id="headerContent">
+            <div class="container">
+                <div id="headerHeading">Celhood</div>
+                <div id="headerSiteIntro">Welcome to Celhood </div>
+                <div id="headerCTA">
+                    <a href="{% url 'register'%}"><button type="button" class="btn btn-primary" id="signUpButton">Sign
+                            Up</button></a>
+                    <a href="{% url 'login'%}"><button type="button" class="btn btn-outline-primary"
+                            id="signInButton">Sign In</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="descriptions container">
+        <div class="row">
+            <div id="updates" class="col-lg-4">
+                <div class="descHeading">Updates</div>
+                <div class="descIcon"><i class="fas fa-newspaper    "></i></div>
+                <div class="descText">Get updates about Celhood</div>
+            </div>
+            <div id="businesses" class="col-lg-4">
+                <div class="descHeading">Businesses</div>
+                <div class="descIcon"><i class="fas fa-business-time"></i></div>
+                <div class="descText">Various businesses thrive in Celhood</div>
+            </div>
+            <div id="info" class="col-lg-4">
+                <div class="descHeading">Info</div>
+                <div class="descIcon"><i class="fas fa-home    "></i></div>
+                <div class="descText">There are details about each neighbourhood </div>
+            </div>
+        </div>
+    </div>
+</main>
+{%endblock%}
